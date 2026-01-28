@@ -1,0 +1,26 @@
+body {
+    background-color: #4e8397;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.overskrift{
+    color: #4ffbdf;
+}
+
+#hud {
+    padding: 10px;
+    border: 2px solid black;
+    margin: 10px;
+    background-color: #845ec2;
+}
+
+
+#inventory {
+    display: none;
+}
+
+

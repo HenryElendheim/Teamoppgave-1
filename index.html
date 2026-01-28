@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Doggy Clicker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Test</h1>
+    <h1 class="overskrift">Doggy Clicker</h1>
+
+    <div id="hud">
+        <span id="coinsText">Coins: 0</span>
+        <br>
+        <span id="bonusText">Coins per click: 1</span>
+        <br>
+    </div>
+
+    <button onclick="inventoryToggle()">inventory</button>
+    <br>
+    <p id="statusDuration"></p>
+
+    <div id="coinClicker">
+        <button onclick="clickedGuy()">
+            <img src="bikkje.png" alt="bilde av hund" style="width: 200px; height: 175px;">
+        </button>
+        <br>
+        <button onclick="resetAll()">Restart</button>
+    </div>
+
+
+
+    <div id="inventory">
+        <ul id="invList">
+            <button id="invDouble" style="display: none;" onclick="activateDouble()">Double</button>
+            <button id="invAuto" style="display: none;" onclick="activateAuto()">Auto</button>
+            <button id="invTriple" style="display: none;" onclick="activateTriple()">Triple</button>
+        </ul>
+    </div>
+
+
+
+
+    <a href="shop.html">shop</a>
+
+
+
+    <script src="script.js"></script>
+
 </body>
-</html>
