@@ -16,6 +16,8 @@
         <br>
         <span id="bonusText">Coins per click: 1</span>
         <br>
+        <span id="incomeText">Income per second: 0</span>
+        <br>
     </div>
 
     <button onclick="inventoryToggle()">inventory</button>
@@ -26,17 +28,18 @@
         <button onclick="clickedGuy()">
             <img src="bikkje.png" alt="bilde av hund" style="width: 200px; height: 175px;">
         </button>
-        <br>
-        <button onclick="resetAll()">Restart</button>
+        <!-- <button onclick="resetAll()">Restart</button> -->
     </div>
 
 
 
     <div id="inventory">
         <ul id="invList">
-            <button id="invDouble" style="display: none;" onclick="activateDouble()">Double</button>
-            <button id="invAuto" style="display: none;" onclick="activateAuto()">Auto</button>
-            <button id="invTriple" style="display: none;" onclick="activateTriple()">Triple</button>
+            <button id="invDouble" onclick="activateDouble()">Double</button>
+            <span id="doubleCDText" style="margin-left:10px;color:#ff4c4c"></span>
+            <br>
+            <button id="invTriple" onclick="activateTriple()">Triple</button>
+            <span id="tripleCDText" style="margin-left:10px;color:#ff4c4c"></span>
         </ul>
     </div>
 
@@ -48,5 +51,4 @@
 
 
     <script src="script.js"></script>
-
 </body>

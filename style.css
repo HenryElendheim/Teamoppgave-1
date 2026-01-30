@@ -1,5 +1,5 @@
 body {
-    background-color: #4e8397;
+    background-color: #1d3f88;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
@@ -7,20 +7,168 @@ body {
     align-items: center;
 }
 
-.overskrift{
-    color: #4ffbdf;
+.overskrift {
+    color: white;
 }
 
 #hud {
-    padding: 10px;
-    border: 2px solid black;
-    margin: 10px;
-    background-color: #845ec2;
+    padding: 14px 20px;
+    border-radius: 14px;
+    margin: 12px;
+
+    background: linear-gradient(135deg, #6d1feb, #331c5c);
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+
+    text-align: center;
+    min-width: 250px;
 }
 
 
 #inventory {
     display: none;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    padding: 15px;
+    border-radius: 14px;
+
+    margin-top: 12px;
+
+    width: 260px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 
+#invList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* Base button style */
+button {
+    background: linear-gradient(135deg, #4ffbdf, #2ac9ae);
+    color: #042a2a;
+
+    border: none;
+    border-radius: 14px;
+
+    padding: 10px 16px;
+    margin: 6px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(135deg, #6ffff0, #38e0c3);
+}
+
+
+
+/* Main clicker button */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#coinClicker button {
+    background: radial-gradient(circle, #6ffff0, #2ac9ae);
+
+    border-radius: 50%;
+
+    width: 220px;
+    height: 220px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 0 20px rgba(79, 251, 223, 0.6),
+        0 8px 16px rgba(0, 0, 0, 0.5);
+
+    transition: all 0.15s ease;
+    animation: float 2.5s ease-in-out infinite;
+
+}
+
+#coinClicker img {
+    width: 160px;
+    height: auto;
+
+    pointer-events: none;
+
+    transition: transform 0.15s ease;
+}
+
+#coinClicker button:active img {
+    transform: scale(0.9) rotate(-3deg);
+}
+
+#coinClicker:hover {
+    transition: all 0.15s ease;
+    transform: scale(1.1) rotate(-3deg);
+}
+
+#coinClicker:active {
+    transition: all 0.15s ease;
+    transform: scale(1) rotate(-3deg);
+}
+
+
+
+
+
+
+#statusDuration {
+    margin: 25px;
+
+    font-weight: bold;
+    font-size: 16px;
+
+    color: #6ffff0;
+
+    text-shadow: 0 0 8px rgba(79, 251, 223, 0.7);
+}
+
+
+
+a {
+    margin-top: 20px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    color: #4ffbdf;
+    font-size: 16px;
+
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #6ffff0;
+}

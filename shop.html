@@ -11,23 +11,48 @@
 <body>
     <h1 class="overskrift">Shop</h1>
 
-    
-    <p id="statusDuration">Duration</p>
+
+    <p id="statusDuration"></p>
 
     <div id="hud">
         <span id="coinsText">Coins: 0</span>
         <br>
         <span id="bonusText">Coins per click: 1</span>
         <br>
-        </div>
+        <span id="incomeText">Income per second: 0</span>
+        <br>
+    </div>
+
+
+
+    <div id="inventory">
+        <ul id="invList">
+            <button id="invDouble" onclick="activateDouble()">Double</button>
+            <span id="doubleCDText" style="margin-left:10px;color:#ff4c4c"></span>
+            <br>
+            <button id="invTriple" onclick="activateTriple()">Triple</button>
+            <span id="tripleCDText" style="margin-left:10px;color:#ff4c4c"></span>
+        </ul>
+    </div>
 
 
     <div id="coinshop">
-        <button onclick="buyDouble()">x2 per click</button>
-        <button onclick="buyBonus()">+1 coins every time you buy</button>
-        <button onclick="buyAuto()">Auto Generating</button>
-        <button onclick="buyTriple()">Triple all coins</button>
-        <button onclick="permaDeath()">???</button>
+        <button id="doubleButton" onclick="buyDouble()">x2 per click <br> cost: 50 coins</button>
+        <button id="bonusButton1" onclick="buyBonus(1)">+1 coin per click <br> cost: 250 coins</button>
+        <button id="autoButton" onclick="buyAuto(1)">Auto Generating <br> cost: 5000 coins</button>
+        <button id="tripleButton" onclick="buyTriple()">Triple all coins <br> cost: 50,000 coins</button>
+        <button id="permaButton" onclick="permaDeath()">??? <br> cost: 1 mill coins</button>
+        <br>
+        <button id="multipleButton" onclick="showBuyMultiple()">Buy x10 / x100</button>
+
+        <div id="x10/100" style="display: none;">
+            <button id="bonusButton2" onclick="buyBonus(10)">+10 coins every time you buy <br> cost: 2500 coins</button>
+            <button id="bonusButton3" onclick="buyBonus(100)">+100 coins every time you buy<br> cost: 25,000
+                coins</button>
+            <br>
+            <button id="autoButton2" onclick="buyAuto(10)">+10 Auto Gen <br> cost: 50,000 coins</button>
+            <button id="autoButton3" onclick="buyAuto(100)">+100 Auto Gen <br> cost: 500,000 coins</button>
+        </div>
     </div>
 
 
@@ -39,4 +64,5 @@
 
 
     <script src="script.js"></script>
+    <script src="shop.js"></script>
 </body>
